@@ -37,5 +37,14 @@ buttons.forEach((btn) => {
                 answerScreen.innerHTML = eval(realTimeScreenValue.join(''));
             }
         }
+
+        // Check if the clicked button is the "Evaluate" button
+        if (btn.id.match('evaluate')) {
+            // Toggle class names and styles to switch between input and answer screens
+            currentInput.className = 'answerScreen';
+            answerScreen.className = 'currentInput';
+            answerScreen.style.color = "black";
+        }
+        
      });
 });
