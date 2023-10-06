@@ -12,3 +12,20 @@ let evaluate = document.querySelector('#evaluate');
 
 // Initialize an array to store real-time screen value
 let realTimeScreenValue = [];
+
+// Event listeners for all buttons
+buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        // Check if the clicked button is not the "Erase" button
+        if (!btn.id.match('erase')) {
+            // Append the button's value to the real-time screen value and update the UI
+            realTimeScreenValue.push(btn.value);
+            currentInput.innerHTML = realTimeScreenValue.join('');
+
+            // Evaluate the expression in real time if it contains only numbers
+            if (btn.classList.contains('num_btn')) {
+                answerScreen.innerHTML = eval(realTimeScreenValue.join(''));
+            }
+        }
+     });
+});
