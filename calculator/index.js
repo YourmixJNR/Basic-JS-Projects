@@ -45,6 +45,11 @@ buttons.forEach((btn) => {
             answerScreen.className = 'currentInput';
             answerScreen.style.color = "black";
         }
-        
+
+        // To prevent undefined error in screen
+        if (typeof eval(realTimeScreenValue.join('')) == 'undefined') {
+            answerScreen.innerHTML = 0;
+        }
+
      });
 });
