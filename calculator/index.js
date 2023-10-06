@@ -13,6 +13,16 @@ let evaluate = document.querySelector('#evaluate');
 // Initialize an array to store real-time screen value
 let realTimeScreenValue = [];
 
+// Event listener for the "Clear" button
+clearbtn.addEventListener("click", () => {
+    // Reset the real-time screen value and update the UI
+    realTimeScreenValue = [''];
+    answerScreen.innerHTML = 0;
+    currentInput.className = 'currentInput';
+    answerScreen.className = 'answerScreen';
+    answerScreen.style.color = "rgba(150, 150, 150, 0.87)";
+});
+
 // Event listeners for all buttons
 buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
