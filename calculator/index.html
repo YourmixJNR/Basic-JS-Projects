@@ -14,29 +14,32 @@
 
                 </div>
                 <div class="input-screen">
-                    <input id="operation" type="text">
-                    <input id="result-screen" type="text">
+                    <!-- It can't be Input here, let's use div instead -->
+                    <!-- <input id="operation" type="text">
+                    <input id="result-screen" type="text"> -->
+                    <div id="operation" class="currentInput"></div>
+                    <div id="result-screen" class="answerScreen">0</div>
                 </div>
                 <div class="btns">
-                    <button class="btn grey-btn">AC</button>
-                    <button class="btn grey-btn">←</button>
-                    <button class="btn orange-btn">%</button>
-                    <button class="btn orange-btn">x</button>
-                    <button class="btn">7</button>
-                    <button class="btn">8</button>
-                    <button class="btn">9</button>
-                    <button class="btn orange-btn">1</button>
-                    <button class="btn">4</button>
-                    <button class="btn">5</button>
-                    <button class="btn">6</button>
-                    <button class="btn orange-btn">-</button>
-                    <button class="btn">1</button>
-                    <button class="btn">2</button>
-                    <button class="btn">3</button>
-                    <button class="btn orange-btn">+</button>
-                    <button class="btn">0</button>
-                    <button class="btn">.</button>
-                    <button class="btn orange-btn">=</button>
+                    <button type="button" value="" id="clear" class="btn grey-btn fun_btn">AC</button>
+                    <button type="button" value="←" id="erase"  class="btn grey-btn fun_btn">←</button>
+                    <button type="button" value="%" class="btn orange-btn fun_btn">%</button>
+                    <button type="button" value="x" class="btn orange-btn fun_btn">x</button>
+                    <button type="button" value="7" class="btn num_btn">7</button>
+                    <button type="button" value="8" class="btn num_btn">8</button>
+                    <button type="button" value="9" class="btn num_btn">9</button>
+                    <button type="button" value="1" class="btn orange-btn num_btn">1</button>
+                    <button type="button" value="4" class="btn num_btn">4</button>
+                    <button type="button" value="5" class="btn num_btn">5</button>
+                    <button type="button" value="6" class="btn num_btn">6</button>
+                    <button type="button" value="-" class="btn orange-btn fun_btn">-</button>
+                    <button type="button" value="1" class="btn num_btn">1</button>
+                    <button type="button" value="2" class="btn num_btn">2</button>
+                    <button type="button" value="3" class="btn num_btn">3</button>
+                    <button type="button" value="+" class="btn orange-btn fun_btn">+</button>
+                    <button type="button" value="0" class="btn num_btn">0</button>
+                    <button type="button" value="." class="btn num_btn">.</button>
+                    <button type="button" value="" id="evaluate" class="btn orange-btn fun_btn">=</button>
                 </div>
 
             </div>
